@@ -1,6 +1,8 @@
 package com.mercadolibre.mutant.dna.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,8 +17,12 @@ public class DnaDetectorController {
 	private DnaDetection dnaDetection;
 	
 	@PostMapping("/mutant")
-	public boolean detectMutantDna(@RequestBody DnaDTO dnaToAnalize) {
-		return dnaDetection.analizeDna(dnaToAnalize);
+	public ResponseEntity<String> detectMutantDna(@RequestBody DnaDTO dnaToAnalize) {
+		if(dnaDetection.analizeDna(dnaToAnalize)) {
+			return new ResponseEntity<>("Is a mutant!", HttpStatus.OK);
+		} else {
+			return new ResponseEntity<>("Is a human!", HttpStatus.FORBIDDEN);
+		}
 	}
 
 }
