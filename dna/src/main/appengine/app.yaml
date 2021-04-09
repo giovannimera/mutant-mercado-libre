@@ -8,3 +8,4 @@ handlers:
   script: auto
 resources:
   cpu: 2
+  memory_gb: 2
