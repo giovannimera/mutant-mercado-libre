@@ -6,3 +6,5 @@ runtime_config:
 handlers:
 - url: /.*
   script: auto
+resources:
+  cpu: 2
