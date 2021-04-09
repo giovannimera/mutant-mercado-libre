@@ -1,3 +1,5 @@
-runtime: java8
 instance_class: F1
+runtime: java
 env: flex
+runtime_config:
+  jdk: openjdk8
