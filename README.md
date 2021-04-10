@@ -2,7 +2,8 @@
 
 Este proyecto expone un api rest para analizar cadenas de adn
 
-Para correr localmente el proyecto, lo puede hacer por eclipse, mediante la opción importar maven project
+Para correr localmente el proyecto, lo puede hacer por eclipse, mediante la opción importar maven project. 
+El proyecto está construido con SpringBoot por lo cual bastará con ejecutar la clase main (DnaApplication.java).
 
 Para probar el api que está desplegada en la nube de google lo puede hacer mediante los siguientes endpoints:
 
